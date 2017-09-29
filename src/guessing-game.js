@@ -5,18 +5,14 @@ class GuessingGame {
       this.min = min;
       this.max = max;
     }
-
     guess() {
       return this.min == this.max ? this.min : Math.ceil(this.min + (this.max - this.min) / 2);
     }
-
     lower() {
       this.max = this.guess();
     }
-
     greater() {
       this.min = this.guess();
     }
 }
-
 module.exports = GuessingGame;
